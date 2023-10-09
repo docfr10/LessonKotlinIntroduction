@@ -1,4 +1,5 @@
 fun main(args: Array<String>) {
+    // Неизменяемые числовые типы данных
     val double: Double
     val float: Float = 1.0F
     val long: Long = 10L
@@ -6,6 +7,7 @@ fun main(args: Array<String>) {
     val short: Short
     val byte: Byte = 0x000F
 
+    // Изменяемые числовые типы данных
     var double1: Double = 1.0
     var float1: Float = 1.0F
     var long1: Long
@@ -18,11 +20,14 @@ fun main(args: Array<String>) {
     float1 = 4.0F
     float1 = 10.0F
 
+    // Символьный тип данных
     val char: Char = 'c'
 
+    // Логический тип данных
     val boolean = true
     val boolean1 = false
 
+    // Ветвление
     if (int1 > int) {
         println("int1 > int")
         println("fdsfd")
@@ -31,8 +36,10 @@ fun main(args: Array<String>) {
         println("fdsfd")
     } else println("else")
 
+    // Ветвление в виде выражения
     val max = if (int1 > int) int1 else int
 
+    // When конструкция
     when (int1) {
         12 -> println("12")
         11 -> println("11")
@@ -41,21 +48,20 @@ fun main(args: Array<String>) {
         else -> println("else")
     }
 
+    // Цикл с предусловием
     while (int1 > 0) {
         int1--
         println(int1)
     }
 
+    // Цикл с потсусловием
     do {
         int1--
         println(int1)
     } while (int1 > 0)
 
+    // Строковый тип данных
     var string: String = "Hello world"
-
-    for (i in string) {
-        println(i)
-    }
 
     val string1 = """
         fasfda
@@ -70,14 +76,22 @@ fun main(args: Array<String>) {
 
     val str = "int1 = ${int1}"
 
+    // Цикл for
+    for (i in string) {
+        println(i)
+    }
+
+    // Массивы
     val array: Array<String> = arrayOf("fadsadas", "sadad", "asddsa")
     val intArray: IntArray = IntArray(5, { 1 })
     array[0] = "Hello"
 
     val a = Array(5, { IntArray(5, { 1 }) })
 
-    example(x = 1, y = 2)
+    // Вызов функции
+    val p = example(x = 1, y = 2)
 
+    // Null объект
     var j: Int? = 1
     j = null
 
@@ -88,4 +102,5 @@ fun main(args: Array<String>) {
 
 }
 
+// Пример функции
 fun example(x: Int, y: Int, i: Int = 1): Int = x + y + i
